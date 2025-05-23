@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     float jumpPower = 7.5f;
     bool isJumping = false;
 
+    float mobileInputX = 0f; // Tambahan untuk tombol kanan/kiri mobile
+
     Rigidbody2D rb;
     Animator animator;
 
@@ -19,27 +21,31 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
+        // Gabungkan input keyboard dan tombol mobile
+        float inputX = Input.GetAxis("Horizontal") + mobileInputX;
+        horizontalInput = Mathf.Clamp(inputX, -1f, 1f); // Hindari lebih dari 1
 
         FlipSprite();
 
-        if(Input.GetButtonDown("Jump") && !isJumping)
+        if ((Input.GetButtonDown("Jump") || mobileJumpPressed) && !isJumping)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             isJumping = true;
+            mobileJumpPressed = false; // Reset flag lompat
         }
 
-        if(Input.GetKeyDown(KeyCode.X))
+        // Ganti animasi
+        if (Input.GetKeyDown(KeyCode.X))
         {
             animator.SetInteger("state", 2);
         }
-        else if(Mathf.Abs(horizontalInput) > 0.1f)
+        else if (Mathf.Abs(horizontalInput) > 0.1f)
         {
-            animator.SetInteger("state", 1);
+            animator.SetInteger("state", 1); // jalan
         }
         else
         {
-            animator.SetInteger("state", 0);
+            animator.SetInteger("state", 0); // idle
         }
     }
 
@@ -50,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        if(isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
+        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
@@ -62,5 +68,30 @@ public class PlayerMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = false;
+    }
+
+    // ---------------- Tambahan Fungsi untuk Tombol UI Mobile ----------------
+
+    public void MoveRight(bool isPressed)
+    {
+        if (isPressed)
+            mobileInputX = 1f;
+        else if (mobileInputX == 1f)
+            mobileInputX = 0f;
+    }
+
+    public void MoveLeft(bool isPressed)
+    {
+        if (isPressed)
+            mobileInputX = -1f;
+        else if (mobileInputX == -1f)
+            mobileInputX = 0f;
+    }
+
+    private bool mobileJumpPressed = false;
+
+    public void MobileJump()
+    {
+        mobileJumpPressed = true;
     }
 }
