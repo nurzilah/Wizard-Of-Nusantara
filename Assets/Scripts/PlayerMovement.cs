@@ -6,38 +6,47 @@ public class PlayerMovement : MonoBehaviour
     float moveSpeed = 5f;
     bool isFacingRight = true;
     float jumpPower = 7.5f;
-    bool isJumping = false;
 
-    float mobileInputX = 0f; // Tambahan untuk tombol kanan/kiri mobile
+    float mobileInputX = 0f; // Untuk tombol kanan/kiri mobile
+    private bool mobileJumpPressed = false;
 
     Rigidbody2D rb;
     Animator animator;
 
+    // 🔽 Tambahan untuk Ground Check
+    public Transform groundCheck;
+    public float groundCheckRadius = 0.2f;
+    public LayerMask groundLayer;
+    private bool isGrounded;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Inisialisasi Animator
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // Gabungkan input keyboard dan tombol mobile
+        // 🔽 Cek apakah karakter sedang menyentuh tanah
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        // Gabungkan input keyboard dan mobile
         float inputX = Input.GetAxis("Horizontal") + mobileInputX;
-        horizontalInput = Mathf.Clamp(inputX, -1f, 1f); // Hindari lebih dari 1
+        horizontalInput = Mathf.Clamp(inputX, -1f, 1f);
 
         FlipSprite();
 
-        if ((Input.GetButtonDown("Jump") || mobileJumpPressed) && !isJumping)
+        // 🔽 Lompat kalau tombol ditekan dan sedang di tanah
+        if ((Input.GetButtonDown("Jump") || mobileJumpPressed) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            isJumping = true;
-            mobileJumpPressed = false; // Reset flag lompat
+            mobileJumpPressed = false; // reset
         }
 
-        // Ganti animasi
+        // 🔽 Ganti animasi
         if (Input.GetKeyDown(KeyCode.X))
         {
-            animator.SetInteger("state", 2);
+            animator.SetInteger("state", 2); // contoh: attack
         }
         else if (Mathf.Abs(horizontalInput) > 0.1f)
         {
@@ -56,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipSprite()
     {
-        if (isFacingRight && horizontalInput < 0f || !isFacingRight && horizontalInput > 0f)
+        if ((isFacingRight && horizontalInput < 0f) || (!isFacingRight && horizontalInput > 0f))
         {
             isFacingRight = !isFacingRight;
             Vector3 ls = transform.localScale;
@@ -65,13 +74,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isJumping = false;
-    }
-
-    // ---------------- Tambahan Fungsi untuk Tombol UI Mobile ----------------
-
+    // 🔽 Fungsi tombol UI kanan
     public void MoveRight(bool isPressed)
     {
         if (isPressed)
@@ -80,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             mobileInputX = 0f;
     }
 
+    // 🔽 Fungsi tombol UI kiri
     public void MoveLeft(bool isPressed)
     {
         if (isPressed)
@@ -88,8 +92,7 @@ public class PlayerMovement : MonoBehaviour
             mobileInputX = 0f;
     }
 
-    private bool mobileJumpPressed = false;
-
+    // 🔽 Fungsi tombol lompat mobile
     public void MobileJump()
     {
         mobileJumpPressed = true;

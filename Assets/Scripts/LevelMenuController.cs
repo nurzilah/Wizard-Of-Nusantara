@@ -30,16 +30,5 @@ public class LevelMenuController : MonoBehaviour
     public void Level6(){
         SceneManager.LoadScene("Level-6", LoadSceneMode.Single);
     }
-    
-    public void Level7(){
-        SceneManager.LoadScene("Level-7", LoadSceneMode.Single);
-    }
 
-    public void Level8(){
-        SceneManager.LoadScene("Level-8", LoadSceneMode.Single);
-    }
-
-    public void Level9(){
-        SceneManager.LoadScene("Level-9", LoadSceneMode.Single);
-    }
 }
