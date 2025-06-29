@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 32722235}
   - component: {fileID: 32722234}
   - component: {fileID: 32722238}
+  - component: {fileID: 32722239}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -238,6 +239,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d7f8d225b26c24abde10f85a6192ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &32722239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32722233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aedfc82e64235245a391286a19db34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
 --- !u!1 &192411052
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +264,9 @@ GameObject:
   - component: {fileID: 192411056}
   - component: {fileID: 192411055}
   - component: {fileID: 192411054}
+  - component: {fileID: 192411057}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,9 +337,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 32722238}
-        m_TargetAssemblyTypeName: DeathMenu, Assembly-CSharp
-        m_MethodName: Back
+      - m_Target: {fileID: 32722239}
+        m_TargetAssemblyTypeName: NextLevelWin, Assembly-CSharp
+        m_MethodName: GoToLevelMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -372,6 +387,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 192411052}
   m_CullTransparentMesh: 1
+--- !u!114 &192411057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192411052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aedfc82e64235245a391286a19db34c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLevel: 1
 --- !u!1 &289510746
 GameObject:
   m_ObjectHideFlags: 0

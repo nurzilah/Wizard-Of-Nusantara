@@ -7,13 +7,13 @@ public class PlayerMovement : MonoBehaviour
     bool isFacingRight = true;
     float jumpPower = 7.5f;
 
-    float mobileInputX = 0f; // Untuk tombol kanan/kiri mobile
+    float mobileInputX = 0f; 
     private bool mobileJumpPressed = false;
 
     Rigidbody2D rb;
     Animator animator;
 
-    // 🔽 Tambahan untuk Ground Check
+
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayer;
@@ -27,23 +27,20 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // 🔽 Cek apakah karakter sedang menyentuh tanah
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // Gabungkan input keyboard dan mobile
         float inputX = Input.GetAxis("Horizontal") + mobileInputX;
         horizontalInput = Mathf.Clamp(inputX, -1f, 1f);
 
         FlipSprite();
 
-        // 🔽 Lompat kalau tombol ditekan dan sedang di tanah
         if ((Input.GetButtonDown("Jump") || mobileJumpPressed) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             mobileJumpPressed = false; // reset
         }
 
-        // 🔽 Ganti animasi
         if (Input.GetKeyDown(KeyCode.X))
         {
             animator.SetInteger("state", 2); // contoh: attack
@@ -74,7 +71,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // 🔽 Fungsi tombol UI kanan
     public void MoveRight(bool isPressed)
     {
         if (isPressed)
@@ -83,7 +79,6 @@ public class PlayerMovement : MonoBehaviour
             mobileInputX = 0f;
     }
 
-    // 🔽 Fungsi tombol UI kiri
     public void MoveLeft(bool isPressed)
     {
         if (isPressed)
@@ -92,9 +87,18 @@ public class PlayerMovement : MonoBehaviour
             mobileInputX = 0f;
     }
 
-    // 🔽 Fungsi tombol lompat mobile
     public void MobileJump()
     {
-        mobileJumpPressed = true;
+        Debug.Log("Jump Clicked");
+
+        if (isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+        }
+        else
+        {
+            Debug.Log("Not grounded, cannot jump.");
+        }
     }
+    
 }
