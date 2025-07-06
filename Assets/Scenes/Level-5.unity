@@ -605,8 +605,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Lomba tradisional terkenal dari Madura?
-  correctAnswer: KarapanSapi
+  question: Apa makanan khas dari Yogyakarta?
+  correctAnswer: gudeg
   wrongAnswerPopup: {fileID: 434299678}
   isInteracting: 0
 --- !u!61 &165279678
@@ -2712,8 +2712,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Candi terbesar di Indonesia?
-  correctAnswer: Borobudur
+  question: Candi Prambanan adalah peninggalan agama apa?
+  correctAnswer: hindu
   wrongAnswerPopup: {fileID: 434299678}
   isInteracting: 0
 --- !u!114 &621493652
@@ -5278,7 +5278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442072180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9731274, y: -3.16153, z: -10}
+  m_LocalPosition: {x: -12.16, y: -3.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6730,8 +6730,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Kota yang terkenal dengan tahu aci?
-  correctAnswer: Tegal
+  question: Apa kota yang terkenal dengan tahu aci?
+  correctAnswer: tegal
   wrongAnswerPopup: {fileID: 434299678}
   isInteracting: 0
 --- !u!114 &1629486052
@@ -11961,8 +11961,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Candi Prambanan adalah peninggalan agama apa?
-  correctAnswer: Hindu
+  question: Candi terbesar di Indonesia?
+  correctAnswer: borobudur
   wrongAnswerPopup: {fileID: 434299678}
   isInteracting: 0
 --- !u!114 &2113897662

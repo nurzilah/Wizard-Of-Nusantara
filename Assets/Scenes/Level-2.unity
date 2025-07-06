@@ -1361,8 +1361,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Alat musik khas Jawa Barat yang digoyang?
-  correctAnswer: Angklung
+  question: Apa ibu kota Kalimantan Timur?
+  correctAnswer: samarinda
   wrongAnswerPopup: {fileID: 889097929}
   isInteracting: 0
 --- !u!61 &390783332
@@ -3639,8 +3639,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Ibukota Kalimantan Timur?
-  correctAnswer: samarinda
+  question: Apa alat musik khas Jawa Barat yang digoyang?
+  correctAnswer: angklung
   wrongAnswerPopup: {fileID: 889097929}
   isInteracting: 0
 --- !u!61 &950780033
@@ -5587,7 +5587,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1442072180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9731274, y: -3.16153, z: -10}
+  m_LocalPosition: {x: -12.16, y: -3.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11475,8 +11475,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Makanan dari sagu khas Papua?
-  correctAnswer: papeda
+  question: Apa pulau tempat Kota Medan berada?
+  correctAnswer: sumatera
   wrongAnswerPopup: {fileID: 889097929}
   isInteracting: 0
 --- !u!61 &1786506359
@@ -11671,8 +11671,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 425543065}
   questionPanel: {fileID: 785171178}
-  question: Kota medan berada di pulau?
-  correctAnswer: sumatera
+  question: Apa makanan khas dari Yogyakarta?
+  correctAnswer: gudeg
   wrongAnswerPopup: {fileID: 889097929}
   isInteracting: 0
 --- !u!114 &1810355474

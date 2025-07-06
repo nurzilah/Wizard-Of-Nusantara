@@ -722,8 +722,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: tari jaipong berasal dari?
-  correctAnswer: jawabarat
+  question: Tarian apa dari Jawa Barat?
+  correctAnswer: jaipong
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
 --- !u!114 &133360120
@@ -1247,7 +1247,7 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Pulau Bali Terkenal dengan
+  question: Apa wisata terkenal di Pulau Bali?
   correctAnswer: pantai
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
@@ -2383,8 +2383,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: pelabuhan merak berada di provinsi?
-  correctAnswer: banten
+  question: Indonesia ada berapa provinsi?
+  correctAnswer: 38
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
 --- !u!114 &606696169
@@ -9257,7 +9257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175217337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.835851, y: -4.36447, z: -10}
+  m_LocalPosition: {x: -11.462599, y: -4.8256097, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10082,8 +10082,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Tari Kecak berasal dari?
-  correctAnswer: bali
+  question: Tarian apa dari Bali?
+  correctAnswer: kecak
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
 --- !u!114 &1326828550
@@ -11326,8 +11326,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: makanan khas kota bogor?
-  correctAnswer: asinan
+  question: Apa makanan khas dari Papua yang terbuat dari sagu?
+  correctAnswer: papeda
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
 --- !u!61 &1580032343
@@ -11762,8 +11762,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Indonesia ada berapa provinsi?
-  correctAnswer: 38
+  question: Apa provinsi tempat Pelabuhan Merak?
+  correctAnswer: banten
   wrongAnswerPopup: {fileID: 2136219885}
   isInteracting: 0
 --- !u!114 &1891970896

@@ -1645,7 +1645,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 268046987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.9561234, y: -3.16586, z: -10}
+  m_LocalPosition: {x: -12.13965, y: -3.75872, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3539,8 +3539,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 2034700778}
   questionPanel: {fileID: 416125801}
-  question: Kebaya dan beskap adalah pakaian adat dari provinsi?
-  correctAnswer: jawatengah
+  question: Apa makanan khas Palembang?
+  correctAnswer: pempek
   wrongAnswerPopup: {fileID: 140886215}
   isInteracting: 0
 --- !u!61 &846026991
@@ -3748,8 +3748,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 2034700778}
   questionPanel: {fileID: 416125801}
-  question: Makanan khas Palembang?
-  correctAnswer: pempek
+  question: Apa makanan khas Padang dari daging sapi?
+  correctAnswer: rendang
   wrongAnswerPopup: {fileID: 140886215}
   isInteracting: 0
 --- !u!61 &897128805
@@ -3816,8 +3816,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 2034700778}
   questionPanel: {fileID: 416125801}
-  question: "Lagu \u201CApuse\u201D berasal dari daerah mana?"
-  correctAnswer: Papua
+  question: Rumah adat apa dari Jawa?
+  correctAnswer: joglo
   wrongAnswerPopup: {fileID: 140886215}
   isInteracting: 0
 --- !u!61 &991397566
@@ -7118,8 +7118,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 2034700778}
   questionPanel: {fileID: 416125801}
-  question: Makanan khas padang yang terbuat dari daging sapi?
-  correctAnswer: Rendang
+  question: 'Lagu tradisional dari mana: Apuse?'
+  correctAnswer: papua
   wrongAnswerPopup: {fileID: 140886215}
   isInteracting: 0
 --- !u!114 &1132805407

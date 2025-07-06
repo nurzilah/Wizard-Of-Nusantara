@@ -590,8 +590,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: "Lagu \u201CAmpar-Ampar Pisang\u201D berasal dari?"
-  correctAnswer: Kalimantan
+  question: 'Lagu tradisional dari mana: Bungong Jeumpa?'
+  correctAnswer: aceh
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
 --- !u!114 &133360120
@@ -1154,7 +1154,7 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Ibukota Provinsi Bali?
+  question: Apa ibu kota Provinsi Bali?
   correctAnswer: Denpasar
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
@@ -2549,8 +2549,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Tarian dari Aceh?
-  correctAnswer: Saman
+  question: Apa ibu kota Provinsi Sulawesi Selatan?
+  correctAnswer: makassar
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
 --- !u!114 &606696169
@@ -9103,7 +9103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175217337}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.835851, y: -4.36447, z: -10}
+  m_LocalPosition: {x: -11.462599, y: -4.8256097, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9852,7 +9852,7 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Kota besar di Sumatera Barat?
+  question: Apa kota besar di Sumatera Barat?
   correctAnswer: Padang
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
@@ -10972,8 +10972,8 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Nama rumah adat dari Jawa?
-  correctAnswer: Joglo
+  question: Tarian apa dari Aceh?
+  correctAnswer: saman
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
 --- !u!61 &1580032343
@@ -11765,7 +11765,7 @@ MonoBehaviour:
   health: 1
   questionText: {fileID: 1511225177}
   questionPanel: {fileID: 1368346419}
-  question: Jakarta berada di pulau?
+  question: Apa pulau tempat Jakarta berada?
   correctAnswer: jawa
   wrongAnswerPopup: {fileID: 24945955}
   isInteracting: 0
